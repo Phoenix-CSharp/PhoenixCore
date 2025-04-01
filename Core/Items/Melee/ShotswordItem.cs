@@ -4,7 +4,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Items.Melee{
+namespace WaMCore.Core.Items.Melee{
     public class ShortswordItem : MeleeItem{
         public virtual int projectileID { get; set; }
         public virtual float shootSpeed { get; set; }

@@ -1,9 +1,9 @@
+#define NTEX // simple
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Items.CustomDamage{
+namespace WaMCore.Core.Items.CustomDamage{
     public class CustoomDamageWeaponItem : CustomDamageItem{
-        
     }
 }

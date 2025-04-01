@@ -8,7 +8,7 @@ using XPT.Core.Audio.MP3Sharp.Decoding.Decoders.LayerIII;
 using System;
 using Terraria.Audio;
 
-namespace WaMCore.Items.Melee{
+namespace WaMCore.Core.Items.Melee{
     public class ShootingSwordItem : MeleeItem{
         public virtual int projectileID { get; set; }
         public virtual float shootSpeed { get; set; }

@@ -5,7 +5,7 @@ using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 
-namespace WaMCore.Items.Melee{
+namespace WaMCore.Core.Items.Melee{
     public class SwingingEnergySwordItem : MeleeItem{
         public sealed override DamageClass damageType { get; } = DamageClass.Melee;
         public virtual SoundStyle sound { get; set; }

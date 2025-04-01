@@ -3,7 +3,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Items.Melee{
+namespace WaMCore.Core.Items.Melee{
     public class AdvancedFlail : MeleeItem{
         public sealed override DamageClass damageType { get; } = DamageClass.MeleeNoSpeed;
         public virtual int projectileID { get; set; }

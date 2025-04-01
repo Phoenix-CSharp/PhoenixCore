@@ -2,7 +2,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Items.Melee{
+namespace WaMCore.Core.Items.Melee{
     public class SwordItem : MeleeItem{
         public sealed override DamageClass damageType { get; } = DamageClass.Melee;
         public virtual SoundStyle sound { get; set; }

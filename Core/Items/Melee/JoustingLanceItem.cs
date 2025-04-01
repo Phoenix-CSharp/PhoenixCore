@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.GameContent.RGB;
 using Terraria.ModLoader;
 
-namespace WaMCore.Items.Melee {
+namespace WaMCore.Core.Items.Melee {
     public class JoustingLanceItem : MeleeItem{
         public sealed override DamageClass damageType { get; } = DamageClass.MeleeNoSpeed;
         public virtual int projectileID { get; set; }

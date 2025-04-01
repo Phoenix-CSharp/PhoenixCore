@@ -4,7 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.Audio;
 
-namespace WaMCore.Items.Melee{
+namespace WaMCore.Core.Items.Melee{
     public class YoyoItem : MeleeItem{
         public sealed override DamageClass damageType { get; } = DamageClass.MeleeNoSpeed;
         public virtual int projectileID { get; set; }

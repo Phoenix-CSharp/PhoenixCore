@@ -3,7 +3,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Items.Range{
+namespace WaMCore.Core.Items.Range{
     public class CustomAmmoGunItem : RangeItem{
         public sealed override DamageClass damageType { get; } = DamageClass.Ranged;
         public virtual int ammoID { get; set; }

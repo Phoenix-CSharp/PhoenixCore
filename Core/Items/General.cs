@@ -1,8 +1,9 @@
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Items{
+namespace WaMCore.Core.Items{
     public class MagicItem : ModItem{
         public virtual int mana { get; }
         public virtual DamageClass damageType { get; }
