@@ -1,0 +1,3 @@
+displayName = Wine-and-Meat.Core
+author = HANNIBAL, cosmicstone
+version = 0.1
