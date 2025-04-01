@@ -5,13 +5,10 @@ using Terraria.ModLoader;
 
 namespace WaMCore.Core.Items{
     [Autoload(false)]
-    public class MagicItem : ModItem{
+    public class Base_MagicItem : ModItem{
         public virtual int mana { get; }
         public virtual DamageClass damageType { get; }
-        public sealed override void SetStaticDefaults()
-        {
-            Item.staff[Item.type] = true;
-        }
+        public virtual int projectileID { get; }
         public sealed override bool MagicPrefix()
         {
             return true;
@@ -26,18 +23,16 @@ namespace WaMCore.Core.Items{
         }
     }
     [Autoload(false)]
-    public class SummonItem : ModItem{
+    public class Base_SummonItem : ModItem{
+        public virtual int whipProjectileID { get; }
+        public virtual int damage { get; }
+        public virtual float knockback { get; }
+        public virtual float shotSpeed { get; }
         public virtual int mana { get; }
         public virtual float minionSlotsRequired { get; }
-        public virtual Projectile minion { get; }
-        public virtual ModBuff minionBuff { get; } 
+        public virtual int minion { get; }
+        public virtual int minionBuff { get; }
         public virtual DamageClass damageType { get; }
-        public sealed override void SetStaticDefaults()
-        {
-            ItemID.Sets.GamepadWholeScreenUseRange[Item.type] = true;
-            ItemID.Sets.LockOnIgnoresCollision[Item.type] = true;
-            ItemID.Sets.StaffMinionSlotsRequired[Item.type] = minionSlotsRequired;
-        }
     }
     [Autoload(false)]
     public class RangeItem : ModItem{
