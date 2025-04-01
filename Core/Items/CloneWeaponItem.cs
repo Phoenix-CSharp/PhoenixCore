@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ModLoader;
 
 namespace WaMCore.Core.Items{
+    [Autoload(false)]
     public class CloneWeapon : ModItem{
         public virtual int projectileID { get; set; }
         public virtual float shootSpeed { get; set; }

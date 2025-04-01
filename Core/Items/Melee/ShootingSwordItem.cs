@@ -9,6 +9,7 @@ using System;
 using Terraria.Audio;
 
 namespace WaMCore.Core.Items.Melee{
+    [Autoload(false)]
     public class ShootingSwordItem : MeleeItem{
         public virtual int projectileID { get; set; }
         public virtual float shootSpeed { get; set; }

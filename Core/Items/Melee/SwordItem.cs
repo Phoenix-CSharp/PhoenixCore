@@ -3,6 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace WaMCore.Core.Items.Melee{
+    [Autoload(false)]
     public class SwordItem : MeleeItem{
         public sealed override DamageClass damageType { get; } = DamageClass.Melee;
         public virtual SoundStyle sound { get; set; }

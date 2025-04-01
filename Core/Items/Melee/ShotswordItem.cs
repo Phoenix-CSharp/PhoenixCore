@@ -5,6 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace WaMCore.Core.Items.Melee{
+    [Autoload(false)]
     public class ShortswordItem : MeleeItem{
         public virtual int projectileID { get; set; }
         public virtual float shootSpeed { get; set; }

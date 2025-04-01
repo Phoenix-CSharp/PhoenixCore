@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace WaMCore.Core.Items.Melee{
+    [Autoload(false)]
     public class AdvancedFlail : MeleeItem{
         public sealed override DamageClass damageType { get; } = DamageClass.MeleeNoSpeed;
         public virtual int projectileID { get; set; }

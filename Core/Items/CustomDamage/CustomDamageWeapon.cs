@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace WaMCore.Core.Items.CustomDamage{
-    public class CustoomDamageWeaponItem : CustomDamageItem{
+    [Autoload(false)]
+    public class CustomDamageWeaponItem : CustomDamageItem{
     }
 }
