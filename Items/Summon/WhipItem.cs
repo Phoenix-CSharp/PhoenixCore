@@ -2,21 +2,25 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Core.Items.Summon{
-    public class WhipItem : GeneralItem, ISummonItem, IWhipItem{
-        public sealed override DamageClass damageType { get; } = DamageClass.SummonMeleeSpeed; 
+namespace WaMCore.Core.Items.Summon
+{
+    public class WhipItem : GeneralItem, ISummonItem, IWhipItem
+    {
+        
         public int projectileID { get; }
         public int damage { get; }
         public float knockback { get; }
-        public float shotSpeed { get; }
-        public WhipItem(int projectileID, int damage, float knockback, float shotSpeed){
+        public float shootSpeed { get; }
+        public WhipItem(int projectileID, int damage, float knockback, float shootSpeed) : base()
+        {
             this.projectileID = projectileID;
             this.damage = damage;
             this.knockback = knockback;
+            this.shootSpeed = shootSpeed;
         }
         public override void SetDefaults()
         {
-            Item.DefaultToWhip(projectileID, damage, knockback, shotSpeed);
+            Item.DefaultToWhip(projectileID, damage, knockback, shootSpeed);
         }
         public sealed override bool MeleePrefix()
         {
