@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WaMCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2fc055dbc6057aa9270995f512361093683c4828")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6f12dbd0fdf5e0c17ed717b6e74d1362d3796a42")]
 [assembly: System.Reflection.AssemblyProductAttribute("WaMCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WaMCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
