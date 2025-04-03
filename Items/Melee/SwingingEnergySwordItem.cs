@@ -10,13 +10,22 @@ namespace PhoenixCore.Core.Items.Melee{
         public int damage { get; }
         public int? projectileID { get; }
         public float? shootSpeed { get; }
+        public SoundStyle sound { get; }
+        public int? yoyoRange { get; }
+        public SwingingEnergySwordItem(int damage, int projectileID, SoundStyle sound, float? shootSpeed = null, int? yoyoRange = null) : base(DamageClass.Melee){
+            this.damage = damage;
+            this.projectileID = projectileID;
+            this.sound = sound;
+            this.shootSpeed = shootSpeed;
+            this.yoyoRange = yoyoRange;
+        }
 
         public override void SetDefaults()
         {
+            base.SetDefaults();
             Item.useStyle = ItemUseStyleID.Swing;
             Item.UseSound = sound;
-            Item.DamageType = damageType;
-            Item.shoot = projectileID;
+            Item.shoot = (int)projectileID;
             Item.noMelee = true;
             Item.shootsEveryUse = true;
             Item.autoReuse = true;

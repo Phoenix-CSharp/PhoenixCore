@@ -1,3 +1,4 @@
+using PhoenixCore.Core.Items;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
@@ -5,7 +6,7 @@ using Terraria.ModLoader;
 
 namespace WaMCore.Core.Items.Melee{
     [Autoload(false)]
-    public class SpearItem : MeleeItem{
+    public class SpearItem : GeneralItem , IMeleeItem{
         public sealed override DamageClass damageType { get; } = DamageClass.Melee;
         public virtual SoundStyle sound { get; set; }
         public virtual int projectileID { get; set; }
