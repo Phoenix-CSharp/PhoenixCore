@@ -1,5 +1,3 @@
-using System.Runtime;
-using Steamworks;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;

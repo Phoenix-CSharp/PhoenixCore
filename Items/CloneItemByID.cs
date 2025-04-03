@@ -1,6 +1,4 @@
 using Terraria;
-using Terraria.GameContent.Bestiary;
-using Terraria.ModLoader;
 
 namespace WaMCore.Core.Items
 {
