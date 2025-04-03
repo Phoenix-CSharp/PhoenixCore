@@ -2,7 +2,7 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace WaMCore.Core.Items
+namespace PhoenixCore.Core.Items
 {
     public class GeneralItem : ModItem
     {
@@ -21,6 +21,10 @@ namespace WaMCore.Core.Items
     public interface IMeleeItem
     {
         int damage { get; }
+        int? projectileID { get; }
+        float? shootSpeed { get; }
+        SoundStyle sound { get; }
+        int? yoyoRange { get; }
     }
     public interface ISummonItem
     {
@@ -46,6 +50,8 @@ namespace WaMCore.Core.Items
         SoundStyle sound { get; }
         int? ammoID { get; }
         int use_animationTime { get; }
+        float? chanceNotConsumeAmmo { get; }
+        bool isSingleShot { get; }
     }
     public interface IMagicItem
     {

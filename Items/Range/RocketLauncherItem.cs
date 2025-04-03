@@ -2,8 +2,9 @@ using System.Collections.Generic;
 using Terraria.Audio;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
+using Terraria;
 
-namespace WaMCore.Core.Items.Range
+namespace PhoenixCore.Core.Items.Range
 {
     public class RocketLauncherItem : GeneralItem, IRangeItem
     {
@@ -12,9 +13,10 @@ namespace WaMCore.Core.Items.Range
         public SoundStyle sound { get; }
         public int? ammoID { get; }
         public int use_animationTime { get; }
-        public bool isSingleShot { get ;}
+        public bool isSingleShot { get; }
         public int? itemIDForChangeProjectile { get; }
         public int? projectileIDForChangeProjectile { get; }
+        public float? chanceNotConsumeAmmo { get; }
         public RocketLauncherItem(int projectileID, float shootSpeed, SoundStyle sound, int ammoID, int use_animationTime,bool isSingleShot = true, int? itemIDForChangeProjectile = null, int? projectileIDForChangeProjectile = null)
         {
             this.projectileID = projectileID;
@@ -43,6 +45,10 @@ namespace WaMCore.Core.Items.Range
         public override Vector2? HoldoutOffset()
         {
             return new Vector2(-8f, 2f);
+        }
+        public override bool CanConsumeAmmo(Item ammo, Player player)
+        {
+            return Main.rand.NextFloat() >= (chanceNotConsumeAmmo == null ? 1.1f : (float)chanceNotConsumeAmmo);
         }
     }
 }

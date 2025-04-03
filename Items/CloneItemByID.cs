@@ -1,6 +1,6 @@
 using Terraria;
 
-namespace WaMCore.Core.Items
+namespace PhoenixCore.Core.Items
 {
 
     public class CloneItemByID : GeneralItem, ICloneItem

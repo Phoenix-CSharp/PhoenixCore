@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.2.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaMCore", "WaMCore.csproj", "{48467774-77FB-509E-55E7-F5EA13CBD909}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoenixCore", "PhoenixCore.csproj", "{48467774-77FB-509E-55E7-F5EA13CBD909}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -3,7 +3,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Core.Items.Range
+namespace PhoenixCore.Core.Items.Range
 {
     public class ExplosiveItem : GeneralItem, IRangeItem
     {
@@ -12,6 +12,9 @@ namespace WaMCore.Core.Items.Range
         public SoundStyle sound { get; }
         public int? ammoID { get; }
         public int use_animationTime { get; }
+        public float chanceNotComsumeAmmo { get; }
+        public float? chanceNotConsumeAmmo { get; }
+        public bool isSingleShot { get; }
         /// <summary>
         /// Generate Explosive item (e.g. granate)
         /// 
@@ -30,13 +33,14 @@ namespace WaMCore.Core.Items.Range
         /// <param name="sound"></param>
         /// <param name="use_animationTime"></param>
         /// <param name="ammoID"></param>
-        public ExplosiveItem(int projectileID, float shootSpeed, SoundStyle sound, int use_animationTime, int? ammoID = null) : base(DamageClass.Ranged)
+        public ExplosiveItem(int projectileID, float shootSpeed, SoundStyle sound, int use_animationTime,bool isSingleShot, int? ammoID = null) : base(DamageClass.Ranged)
         {
             this.projectileID = projectileID;
             this.shootSpeed = shootSpeed;
             this.sound = sound;
             this.use_animationTime = use_animationTime;
             this.ammoID = ammoID;
+            this.isSingleShot = isSingleShot;
 
         }
         public override void SetStaticDefaults()
@@ -55,6 +59,7 @@ namespace WaMCore.Core.Items.Range
             Item.useTime = use_animationTime;
             Item.noMelee = true;
             Item.useAmmo = ammoID == null ? AmmoID.None : (int)ammoID;
+            Item.autoReuse = isSingleShot;
         }
     }
 }

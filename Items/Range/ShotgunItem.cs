@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Core.Items.Range{
+namespace PhoenixCore.Core.Items.Range{
     public class ShotgunItem : GeneralItem, IRangeItem{
         public int projectileID { get; }
         public float shootSpeed { get; }
@@ -16,7 +16,8 @@ namespace WaMCore.Core.Items.Range{
         public bool isSingleShot { get; }
         public int projectileCountPerShoot { get; }
         public int spreedAngle { get; }
-        public ShotgunItem(int projectileID, float shootSpeed, SoundStyle sound, int? ammoID, int use_animationTime, bool isSingleShot, int projectileCountPerShoot) : base(DamageClass.Ranged){
+        public float? chanceNotConsumeAmmo { get; }
+        public ShotgunItem(int projectileID, float shootSpeed, SoundStyle sound, int? ammoID, int use_animationTime, bool isSingleShot, int projectileCountPerShoot, float? chanceNotConsumeAmmo = null) : base(DamageClass.Ranged){
             this.projectileID = projectileID;
             this.shootSpeed = shootSpeed;
             this.sound = sound;
@@ -24,6 +25,7 @@ namespace WaMCore.Core.Items.Range{
             this.use_animationTime = use_animationTime;
             this.isSingleShot = isSingleShot;
             this.projectileCountPerShoot = projectileCountPerShoot;
+            this.chanceNotConsumeAmmo = chanceNotConsumeAmmo;
         }
         public override void SetDefaults()
         {
@@ -42,6 +44,10 @@ namespace WaMCore.Core.Items.Range{
         public override Vector2? HoldoutOffset()
         {
             return new Vector2(-2f, -2f);
+        }
+        public override bool CanConsumeAmmo(Item ammo, Player player)
+        {
+            return Main.rand.NextFloat() >= (chanceNotConsumeAmmo == null ? 1.1f : (float)chanceNotConsumeAmmo);
         }
     }
 }

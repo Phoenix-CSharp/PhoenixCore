@@ -5,12 +5,12 @@ using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 
-namespace WaMCore.Core.Items.Melee{
-    [Autoload(false)]
-    public class SwingingEnergySwordItem : MeleeItem{
-        public sealed override DamageClass damageType { get; } = DamageClass.Melee;
-        public virtual SoundStyle sound { get; set; }
-        public virtual int projectileID { get; set; }
+namespace PhoenixCore.Core.Items.Melee{
+    public class SwingingEnergySwordItem : GeneralItem, IMeleeItem{
+        public int damage { get; }
+        public int? projectileID { get; }
+        public float? shootSpeed { get; }
+
         public override void SetDefaults()
         {
             Item.useStyle = ItemUseStyleID.Swing;

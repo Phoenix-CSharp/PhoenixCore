@@ -1,8 +1,6 @@
 using Terraria;
-using Terraria.ID;
-using Terraria.ModLoader;
 
-namespace WaMCore.Core.Items.Summon
+namespace PhoenixCore.Core.Items.Summon
 {
     public class WhipItem : GeneralItem, ISummonItem, IWhipItem
     {
