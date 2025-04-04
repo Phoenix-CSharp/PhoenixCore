@@ -1,25 +1,31 @@
-using Microsoft.CodeAnalysis.FlowAnalysis.DataFlow;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Core.Items.Melee{
-    [Autoload(false)]
-    public class ShortswordItem : MeleeItem{
-        public virtual int projectileID { get; set; }
-        public virtual float shootSpeed { get; set; }
-        public virtual SoundStyle sound { get; set; }
-        public sealed override DamageClass damageType { get; } = DamageClass.MeleeNoSpeed;
+namespace PhoenixCore.Core.Items.Melee{
+    public class ShortswordItem : GeneralItem, IMeleeItem{
+        public int? projectileID { get; }
+        public float? shootSpeed { get; }
+        public SoundStyle sound { get; }
+        public int damage { get; }
+        public int? yoyoRange { get; }
+        public ShortswordItem(int damage, int projectileID, float shootSpeed, SoundStyle sound, int? yoyoRange = null) : base(DamageClass.MeleeNoSpeed){
+            this.damage = damage;
+            this.projectileID = projectileID;
+            this.shootSpeed = shootSpeed;
+            this.sound = sound;
+            this.yoyoRange = yoyoRange;
+        }
         public override void SetDefaults()
         {
+            base.SetDefaults();
             Item.useStyle = ItemUseStyleID.Rapier;
-            Item.DamageType = damageType;
             Item.autoReuse = false;
             Item.noUseGraphic = true;
             Item.noMelee = true;
-            Item.shoot = projectileID;
-            Item.shootSpeed = shootSpeed;
+            Item.shoot = (int)projectileID;
+            Item.shootSpeed = (float)shootSpeed;
             Item.UseSound = sound;
         }
     }

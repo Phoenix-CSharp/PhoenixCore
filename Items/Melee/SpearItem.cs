@@ -5,26 +5,33 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace WaMCore.Core.Items.Melee{
-    [Autoload(false)]
     public class SpearItem : GeneralItem , IMeleeItem{
-        public sealed override DamageClass damageType { get; } = DamageClass.Melee;
-        public virtual SoundStyle sound { get; set; }
-        public virtual int projectileID { get; set; }
-        public virtual float shootSpeed { get; set; }
-        public sealed override void SetStaticDefaults()
+        public int damage {get;}
+        public int? projectileID { get; }
+        public SoundStyle sound { get; }
+        public float? shootSpeed { get; }
+        public int? yoyoRange {get;}
+        public SpearItem(int damage, SoundStyle sound, int projectileID, float shootSpeed, int? yoyoRange = null) : base(DamageClass.Melee){
+            this.damage = damage;
+            this.projectileID = projectileID;
+            this.sound = sound;
+            this.shootSpeed = shootSpeed;
+            this.yoyoRange = yoyoRange;
+        }
+        public override void SetStaticDefaults()
         {
             ItemID.Sets.SkipsInitialUseSound[Item.type] = true;
             ItemID.Sets.Spears[Item.type] = true;
         }
         public override void SetDefaults()
         {
+            base.SetDefaults();
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.UseSound = sound;
-            Item.DamageType = damageType;
             Item.noMelee = true;
             Item.noUseGraphic = true;
-            Item.shootSpeed = shootSpeed;
-            Item.shoot = projectileID;
+            Item.shootSpeed = (float)shootSpeed;
+            Item.shoot = (int)projectileID;
         }
         public override bool CanUseItem(Player player)
         {

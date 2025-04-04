@@ -3,28 +3,37 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Core.Items.Melee{
-    [Autoload(false)]
-    public class AdvancedFlail : MeleeItem{
-        public sealed override DamageClass damageType { get; } = DamageClass.MeleeNoSpeed;
-        public virtual int projectileID { get; set; }
-        public virtual SoundStyle sound { get; set; }
-        public virtual float shootSpeed { get; set; }
-        public virtual float damageMultiplier { get; set; }
+namespace PhoenixCore.Core.Items.Melee{
+    public class AdvancedFlail : GeneralItem , IMeleeItem{
+        public int? projectileID { get; }
+        public SoundStyle sound { get; }
+        public float? shootSpeed { get; }
+        public int? yoyoRange { get; }
+        public int damage { get; }
+        public float damageMultiplier { get; }
+        public AdvancedFlail(int projectileID, float shootSpeed, SoundStyle sound, int damage, float damageMultiplier, int? yoyoRange = null):base(DamageClass.MeleeNoSpeed){
+            this.projectileID = projectileID;
+            this.shootSpeed = shootSpeed;
+            this.sound = sound;
+            this.damage = damage;
+            this.damageMultiplier = damageMultiplier;
+            this.yoyoRange = yoyoRange;
+        }
         public override void SetStaticDefaults()
         {
             ItemID.Sets.ToolTipDamageMultiplier[Type] = damageMultiplier;
         }
         public override void SetDefaults()
         {
+            base.SetDefaults();
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.noUseGraphic = true;
-            Item.shoot = projectileID;
-            Item.shootSpeed = shootSpeed;
+            Item.shoot = (int)projectileID;
+            Item.shootSpeed = (float)shootSpeed;
             Item.UseSound = sound;
-            Item.DamageType = damageType;
             Item.channel = true;
             Item.noMelee = true;
+            Item.damage = damage;
         }
 
     }
