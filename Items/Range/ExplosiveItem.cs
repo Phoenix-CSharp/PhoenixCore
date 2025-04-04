@@ -3,7 +3,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace PhoenixCore.Core.Items.Range
+namespace PhoenixCore.Items.Range
 {
     public class ExplosiveItem : GeneralItem, IRangeItem
     {

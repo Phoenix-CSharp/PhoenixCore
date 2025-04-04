@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.Audio;
 
-namespace PhoenixCore.Core.Items.Magic{
+namespace PhoenixCore.Items.Magic{
     public class StaffItem : GeneralItem, IMagicItem{
         public float shootSpeed { get; }
         public int shootTime { get; }

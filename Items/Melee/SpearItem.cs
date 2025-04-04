@@ -1,10 +1,9 @@
-using PhoenixCore.Core.Items;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace WaMCore.Core.Items.Melee{
+namespace PhoenixCore.Items.Melee{
     public class SpearItem : GeneralItem , IMeleeItem{
         public int damage {get;}
         public int? projectileID { get; }

@@ -6,7 +6,7 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace PhoenixCore.Core.Items.Range{
+namespace PhoenixCore.Items.Range{
     public class ShotgunItem : GeneralItem, IRangeItem{
         public int projectileID { get; }
         public float shootSpeed { get; }

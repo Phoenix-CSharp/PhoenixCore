@@ -4,7 +4,7 @@ using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Terraria;
 
-namespace PhoenixCore.Core.Items.Range
+namespace PhoenixCore.Items.Range
 {
     public class RocketLauncherItem : GeneralItem, IRangeItem
     {

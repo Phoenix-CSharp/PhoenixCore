@@ -5,7 +5,7 @@ using Terraria.DataStructures;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 
-namespace PhoenixCore.Core.Items.Melee{
+namespace PhoenixCore.Items.Melee{
     public class SwingingEnergySwordItem : GeneralItem, IMeleeItem{
         public int damage { get; }
         public int? projectileID { get; }

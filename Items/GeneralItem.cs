@@ -2,9 +2,9 @@ using Terraria;
 using Terraria.Audio;
 using Terraria.ModLoader;
 
-namespace PhoenixCore.Core.Items
+namespace PhoenixCore.Items
 {
-    internal class GeneralItem : ModItem
+    public class GeneralItem : ModItem
     {
         public DamageClass damageClass { get; }
         public GeneralItem(){

@@ -2,7 +2,7 @@ using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 
-namespace PhoenixCore.Core.Items.Range{
+namespace PhoenixCore.Items.Range{
     public class MinigunItem : GeneralItem, IRangeItem{
         public int projectileID { get; }
         public float shootSpeed { get; }

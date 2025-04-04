@@ -2,7 +2,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace PhoenixCore.Core.Items.Range{
+namespace PhoenixCore.Items.Range{
     public class JavelinItem : GeneralItem, IRangeItem{
         public int projectileID { get; }
         public float shootSpeed { get; }

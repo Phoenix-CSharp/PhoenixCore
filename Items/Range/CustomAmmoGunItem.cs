@@ -1,7 +1,7 @@
 using Terraria;
 using Terraria.Audio;
 
-namespace PhoenixCore.Core.Items.Range
+namespace PhoenixCore.Items.Range
 {
     public class CustomAmmoGunItem : GeneralItem, IRangeItem
     {

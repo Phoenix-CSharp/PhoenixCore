@@ -1,0 +1,15 @@
+Mods: {
+	PhoenixCore: {
+		Items: {
+			GeneralItem: {
+				DisplayName: General Item
+				Tooltip: ""
+			}
+
+			StaffItem: {
+				DisplayName: Staff Item
+				Tooltip: ""
+			}
+		}
+	}
+}

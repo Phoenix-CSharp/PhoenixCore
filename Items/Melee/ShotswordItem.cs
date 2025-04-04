@@ -3,7 +3,7 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace PhoenixCore.Core.Items.Melee{
+namespace PhoenixCore.Items.Melee{
     public class ShortswordItem : GeneralItem, IMeleeItem{
         public int? projectileID { get; }
         public float? shootSpeed { get; }

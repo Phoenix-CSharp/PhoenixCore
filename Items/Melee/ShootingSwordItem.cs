@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
 
-namespace PhoenixCore.Core.Items.Melee{
+namespace PhoenixCore.Items.Melee{
     public class ShootingSwordItem : GeneralItem, IMeleeItem{
         public int? projectileID { get; }
         public float? shootSpeed { get; }

@@ -1,6 +1,6 @@
 using Terraria;
 
-namespace PhoenixCore.Core.Items
+namespace PhoenixCore.Items
 {
 
     public class CloneItemByID : GeneralItem, ICloneItem

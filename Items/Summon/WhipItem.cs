@@ -1,6 +1,6 @@
 using Terraria;
 
-namespace PhoenixCore.Core.Items.Summon
+namespace PhoenixCore.Items.Summon
 {
     public class WhipItem : GeneralItem, ISummonItem, IWhipItem
     {
