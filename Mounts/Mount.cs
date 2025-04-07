@@ -14,6 +14,10 @@ namespace PhoenixCore.Mounts
 	// This mount is a car with wheels which behaves similarly to the unicorn mount. The car has 3 balloons attached to the back.
 	public class ExampleMount : ModMount
 	{
+		public string texturePath { get; }
+		public ExampleMount(string texturePath){
+			this.texturePath = texturePath;
+		}
 		private Asset<Texture2D> balloonTexture;
 
 		// Since only a single instance of ModMountData ever exists, we can use player.mount._mountSpecificData to store additional data related to a specific mount.
@@ -89,7 +93,7 @@ namespace PhoenixCore.Mounts
 				MountData.textureHeight = MountData.backTexture.Height();
 			}
 
-			balloonTexture = Mod.Assets.Request<Texture2D>("Content/Items/Armor/SimpleAccessory_Balloon");
+			balloonTexture = Mod.Assets.Request<Texture2D>(texturePath);
 		}
 
 		public override void UpdateEffects(Player player) {
