@@ -3,12 +3,16 @@ using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles
+namespace PhoenixCore.Projectiles
 {
 	// This Example show how to implement simple homing projectile
 	// Can be tested with ExampleCustomAmmoGun
-	public class ExampleHomingProjectile : ModProjectile
+	public class HomingProjectile : ModProjectile
 	{
+		public float maxDetectRad;
+		public HomingProjectile(float maxDetectRad){
+			this.maxDetectRad = maxDetectRad;
+		}
 		// Store the target NPC using Projectile.ai[0]
 		private NPC HomingTarget {
 			get => Projectile.ai[0] == 0 ? null : Main.npc[(int)Projectile.ai[0] - 1];
@@ -37,7 +41,7 @@ namespace ExampleMod.Content.Projectiles
 
 		// Custom AI
 		public override void AI() {
-			float maxDetectRadius = 400f; // The maximum radius at which a projectile can detect a target
+			float maxDetectRadius = maxDetectRad; // The maximum radius at which a projectile can detect a target
 
 			// A short delay to homing behavior after being fired
 			if (DelayTimer < 10) {

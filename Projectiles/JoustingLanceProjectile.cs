@@ -6,10 +6,15 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles
+namespace PhoenixCore.Projectiles
 {
-	public class ExampleJoustingLanceProjectile : ModProjectile
+	public class JoustingLanceProjectile : ModProjectile
 	{
+		public int dustID;
+		public JoustingLanceProjectile(int dustID){
+			this.dustID = dustID;
+		}
+
 		public override void SetStaticDefaults() {
 			// This will cause the player to dismount if they are hit by another Jousting Lance.
 			// Since no enemies use Jousting Lances, this will only cause the player to dismount in PVP.
@@ -111,7 +116,7 @@ namespace ExampleMod.Content.Projectiles
 				}
 
 				// Set your dust types here.
-				int dustTypeCommon = ModContent.DustType<Dusts.Sparkle>();
+				int dustTypeCommon = dustID;
 				int dustTypeRare = DustID.WhiteTorch;
 
 				int offset = 4; // This offset will affect how much the dust spreads out.

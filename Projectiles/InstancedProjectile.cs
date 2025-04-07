@@ -4,9 +4,9 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles
+namespace PhoenixCore.Projectiles
 {
-	public class ExampleInstancedProjectile : ModProjectile
+	public class InstancedProjectile : ModProjectile
 	{
 		private Color trailColor;
 

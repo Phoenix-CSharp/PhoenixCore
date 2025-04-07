@@ -1,5 +1,3 @@
-using ExampleMod.Content.Items.Placeable;
-using ExampleMod.Content.Tiles;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -10,11 +8,19 @@ using Terraria.ModLoader;
 // ExampleSandBallGunProjectile is the projectile that is shot by the Sandgun weapon.
 // Both projectiles share the same aiStyle, ProjAIStyleID.FallingTile, but the AIType line in ExampleSandBallGunProjectile ensures that specific logic of the aiStyle is used for the sandgun projectile.
 // It is possible to make a falling projectile not using ProjAIStyleID.FallingTile, but it is a lot of code.
-namespace ExampleMod.Content.Projectiles
+namespace PhoenixCore.Projectiles
 {
-	public abstract class ExampleSandBallProjectile : ModProjectile
+	public abstract class SandBallProjectile : ModProjectile
 	{
-		public override string Texture => "ExampleMod/Content/Projectiles/ExampleSandBallProjectile";
+		public int tileID;
+		public int itemID;
+		public string texture;
+		public override string Texture => texture;
+		public SandBallProjectile(int tileID, int itemID, string texture){
+			this.tileID = tileID;
+			this.itemID = itemID;
+			this.texture = texture;
+		}
 
 		public override void SetStaticDefaults() {
 			ProjectileID.Sets.FallingBlockDoesNotFallThroughPlatforms[Type] = true;
@@ -22,11 +28,12 @@ namespace ExampleMod.Content.Projectiles
 		}
 	}
 
-	public class ExampleSandBallFallingProjectile : ExampleSandBallProjectile
+	public class SandBallFallingProjectile : SandBallProjectile
 	{
+		public SandBallFallingProjectile(int tileID, int itemID, string texture) : base(tileID, itemID, texture){}
 		public override void SetStaticDefaults() {
 			base.SetStaticDefaults();
-			ProjectileID.Sets.FallingBlockTileItem[Type] = new(ModContent.TileType<ExampleSand>(), ModContent.ItemType<ExampleSandBlock>());
+			ProjectileID.Sets.FallingBlockTileItem[Type] = new(tileID, itemID);
 		}
 
 		public override void SetDefaults() {
@@ -35,11 +42,12 @@ namespace ExampleMod.Content.Projectiles
 		}
 	}
 
-	public class ExampleSandBallGunProjectile : ExampleSandBallProjectile
+	public class SandBallGunProjectile : SandBallProjectile
 	{
+		public SandBallGunProjectile(int tileID, int itemID, string texture) : base(tileID, itemID, texture){}
 		public override void SetStaticDefaults() {
 			base.SetStaticDefaults();
-			ProjectileID.Sets.FallingBlockTileItem[Type] = new(ModContent.TileType<ExampleSand>());
+			ProjectileID.Sets.FallingBlockTileItem[Type] = new(tileID);
 		}
 
 		public override void SetDefaults() {
