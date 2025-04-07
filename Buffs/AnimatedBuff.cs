@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Buffs
 {
+	[Autoload(false)]
 	// This buff has an extra animation spritesheet, and also showcases PreDraw specifically.
 	// (We keep the autoloaded texture as one frame in case other mods need to access the buff sprite directly and aren't aware of it having special draw code).
 	public class AnimatedBuff : ModBuff

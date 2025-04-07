@@ -7,6 +7,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	// This file shows an animated projectile
 	// This file also shows advanced drawing to center the drawn projectile correctly
 	public class AdvancedAnimatedProjectile : ModProjectile

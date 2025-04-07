@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 
 namespace ExampleMod.Content.Projectiles
 {
+	[Autoload(false)]
 	public class YoyoProjectile : ModProjectile
 	{
 		public float lifeTime { get; }

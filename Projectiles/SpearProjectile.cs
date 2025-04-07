@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	public class SpearProjectile : ModProjectile
 	{
 		public int dustID { get; }

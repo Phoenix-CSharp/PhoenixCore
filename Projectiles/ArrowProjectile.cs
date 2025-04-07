@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	// This example is similar to the Wooden Arrow projectile
 	public class ArrowProjectile : ModProjectile
 	{

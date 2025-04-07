@@ -7,6 +7,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	// This projectile showcases advanced AI code. Of particular note is a showcase on how projectiles can stick to NPCs in a manner similar to the behavior of vanilla weapons such as Bone Javelin, Daybreak, Blood Butcherer, Stardust Cell Minion, and Tentacle Spike. This code is modeled closely after Bone Javelin.
 	public class JavelinProjectile : ModProjectile
 	{

@@ -6,8 +6,11 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace PhoenixCore.Items.Range{
-    public class ShotgunItem : GeneralItem, IRangeItem{
+namespace PhoenixCore.Items.Range
+{
+    [Autoload(false)]
+    public class ShotgunItem : GeneralItem, IRangeItem
+    {
         public int projectileID { get; }
         public float shootSpeed { get; }
         public SoundStyle sound { get; }
@@ -17,7 +20,8 @@ namespace PhoenixCore.Items.Range{
         public int projectileCountPerShoot { get; }
         public int spreedAngle { get; }
         public float? chanceNotConsumeAmmo { get; }
-        public ShotgunItem(int projectileID, float shootSpeed, SoundStyle sound, int? ammoID, int use_animationTime, bool isSingleShot, int projectileCountPerShoot, float? chanceNotConsumeAmmo = null) : base(DamageClass.Ranged){
+        public ShotgunItem(int projectileID, float shootSpeed, SoundStyle sound, int? ammoID, int use_animationTime, bool isSingleShot, int projectileCountPerShoot, float? chanceNotConsumeAmmo = null) : base(DamageClass.Ranged)
+        {
             this.projectileID = projectileID;
             this.shootSpeed = shootSpeed;
             this.sound = sound;
@@ -34,7 +38,8 @@ namespace PhoenixCore.Items.Range{
         }
         public override bool Shoot(Player player, EntitySource_ItemUse_WithAmmo source, Vector2 position, Vector2 velocity, int type, int damage, float knockback)
         {
-            for (int i = 0; i < projectileCountPerShoot; i++){
+            for (int i = 0; i < projectileCountPerShoot; i++)
+            {
                 Vector2 newVelocity = velocity.RotatedByRandom(MathHelper.ToRadians(spreedAngle));
                 newVelocity *= 1f - Main.rand.NextFloat(0.3f);
                 Projectile.NewProjectileDirect(source, position, newVelocity, type, damage, knockback, player.whoAmI);

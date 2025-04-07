@@ -10,6 +10,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	public class WhipProjectileAdvanced : ModProjectile
 	{
 		public string texturePath { get; }

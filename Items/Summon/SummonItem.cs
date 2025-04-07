@@ -4,9 +4,11 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.DataStructures;
+using Terraria.ModLoader;
 
 namespace PhoenixCore.Items.Summon
 {
+    [Autoload(false)]
     public class SummonItem : GeneralItem, ISummonItem, IMinionSummonItem
     {
         public int projectileID { get; }

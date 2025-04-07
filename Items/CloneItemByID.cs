@@ -1,8 +1,9 @@
 using Terraria;
+using Terraria.ModLoader;
 
 namespace PhoenixCore.Items
 {
-
+    [Autoload(false)]
     public class CloneItemByID : GeneralItem, ICloneItem
     {
         public int? projectileID { get; }

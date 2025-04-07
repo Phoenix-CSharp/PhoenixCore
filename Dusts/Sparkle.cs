@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Dusts
 {
+	[Autoload(false)]
 	public class Sparkle : ModDust
 	{
 		public override void OnSpawn(Dust dust) {

@@ -1,9 +1,13 @@
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.Audio;
+using Terraria.ModLoader;
 
-namespace PhoenixCore.Items.Range{
-    public class MinigunItem : GeneralItem, IRangeItem{
+namespace PhoenixCore.Items.Range
+{
+    [Autoload(false)]
+    public class MinigunItem : GeneralItem, IRangeItem
+    {
         public int projectileID { get; }
         public float shootSpeed { get; }
         public SoundStyle sound { get; }
@@ -13,11 +17,12 @@ namespace PhoenixCore.Items.Range{
         public int spreedAngle { get; }
         public int minAmmoCount { get; }
         public bool isSingleShot { get; }
-        public MinigunItem(int projectileID, float shootSpeed, SoundStyle sound, int ammoID, int use_animationTime, int spreedAngle, int minAmmoCount,bool isSingleShot, float? chanceNotConsumeAmmo = null){
+        public MinigunItem(int projectileID, float shootSpeed, SoundStyle sound, int ammoID, int use_animationTime, int spreedAngle, int minAmmoCount, bool isSingleShot, float? chanceNotConsumeAmmo = null)
+        {
             this.projectileID = projectileID;
             this.shootSpeed = shootSpeed;
             this.sound = sound;
-            this.ammoID =ammoID;
+            this.ammoID = ammoID;
             this.use_animationTime = use_animationTime;
             this.chanceNotConsumeAmmo = chanceNotConsumeAmmo;
             this.spreedAngle = spreedAngle;

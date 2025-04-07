@@ -9,6 +9,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	// This is a copy of the Excalibur's projectile
 	public class SwingingEnergySwordProjectile : ModProjectile
 	{

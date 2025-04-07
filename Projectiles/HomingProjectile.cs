@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	// This Example show how to implement simple homing projectile
 	// Can be tested with ExampleCustomAmmoGun
 	public class HomingProjectile : ModProjectile

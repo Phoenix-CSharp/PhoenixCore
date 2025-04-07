@@ -10,6 +10,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	// Example Advanced Flail is a complete adaption of Ball O' Hurt projectile. The code has been rewritten a bit to make it easier to follow. Compare this code against the decompiled Terraria code for an example of adapting vanilla code. A few comments and extra code snippets show features from other vanilla flails as well.
 	// Example Advanced Flail shows a plethora of advanced AI and collision topics.
 	// See ExampleFlail for a simpler but less customizable flail projectile example.

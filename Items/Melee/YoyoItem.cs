@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 using Terraria.Audio;
 
 namespace PhoenixCore.Items.Melee{
+    [Autoload(false)]
     public class YoyoItem : GeneralItem, IMeleeItem{
         public int damage { get; }
         public int? projectileID { get; }

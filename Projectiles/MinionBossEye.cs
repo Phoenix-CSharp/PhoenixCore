@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	public class MinionBossEye : ModProjectile
 	{
 		public bool FadedIn {

@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace PhoenixCore.Items.Melee{
+    [Autoload(false)]
     public class ShortswordItem : GeneralItem, IMeleeItem{
         public int? projectileID { get; }
         public float? shootSpeed { get; }

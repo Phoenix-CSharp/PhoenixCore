@@ -9,6 +9,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	public class Bullet : ModProjectile
 	{
 		public override void SetStaticDefaults() {

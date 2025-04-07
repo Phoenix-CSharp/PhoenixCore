@@ -1,7 +1,9 @@
 using Terraria;
 using Terraria.Audio;
+using Terraria.ModLoader;
 
 namespace PhoenixCore.Items.Magic{
+    [Autoload(false)]
     public class MagicItem : GeneralItem, IMagicItem{
         public int projectileID { get; }
         public  float shootSpeed { get; }

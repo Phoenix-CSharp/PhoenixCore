@@ -2,8 +2,11 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace PhoenixCore.Items.Range{
-    public class JavelinItem : GeneralItem, IRangeItem{
+namespace PhoenixCore.Items.Range
+{
+    [Autoload(false)]
+    public class JavelinItem : GeneralItem, IRangeItem
+    {
         public int projectileID { get; }
         public float shootSpeed { get; }
         public SoundStyle sound { get; }
@@ -11,7 +14,7 @@ namespace PhoenixCore.Items.Range{
         public int use_animationTime { get; }
         public float? chanceNotConsumeAmmo { get; }
         public bool isSingleShot { get; }
-        public JavelinItem(int projectileID, float shootSpeed, SoundStyle sound, int use_animationTime,bool isSingleShot, int? ammoID = null) : base(DamageClass.Ranged)
+        public JavelinItem(int projectileID, float shootSpeed, SoundStyle sound, int use_animationTime, bool isSingleShot, int? ammoID = null) : base(DamageClass.Ranged)
         {
             this.projectileID = projectileID;
             this.shootSpeed = shootSpeed;

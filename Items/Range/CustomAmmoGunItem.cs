@@ -1,8 +1,10 @@
 using Terraria;
 using Terraria.Audio;
+using Terraria.ModLoader;
 
 namespace PhoenixCore.Items.Range
 {
+    [Autoload(false)]
     public class CustomAmmoGunItem : GeneralItem, IRangeItem
     {
         public int projectileID { get; }

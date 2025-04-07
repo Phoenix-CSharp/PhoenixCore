@@ -3,6 +3,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Buffs
 {
+	[Autoload(false)]
 	public class MountBuff : ModBuff
 	{
 		public int mountID { get; }

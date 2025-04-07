@@ -1,1 +1,9 @@
-Modify this file with a description of your mod.
+[Ru - ru]
+Данный мод является ядром моих модов, он является обязательным для скачивания с моими модами.
+Если же хотите использовать дынный мод ядро в своих мода, открытый исходный код мода лежит в следующем репозитории:
+https://github.com/Phoenix-CSharp/PhoenixCore.git
+
+[En - us]
+This mod is the core of my mods, it is a must-download with my mods.
+If you want to use this core mod in your mods, the mod's open source code is in the following repository:
+https://github.com/Phoenix-CSharp/PhoenixCore.git

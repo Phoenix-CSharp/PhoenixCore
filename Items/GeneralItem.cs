@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Items
 {
+    [Autoload(false)]
     public class GeneralItem : ModItem
     {
         public DamageClass damageClass { get; }

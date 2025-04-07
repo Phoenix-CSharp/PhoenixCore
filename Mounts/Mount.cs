@@ -11,6 +11,7 @@ using PhoenixCore.Buffs;
 
 namespace PhoenixCore.Mounts
 {
+	[Autoload(false)]
 	// This mount is a car with wheels which behaves similarly to the unicorn mount. The car has 3 balloons attached to the back.
 	public class ExampleMount : ModMount
 	{

@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 
 namespace ExampleMod.Content.Projectiles
 {
+	[Autoload(false)]
 	public class WhipProjectile : ModProjectile
 	{
 		public int buffID { get; }

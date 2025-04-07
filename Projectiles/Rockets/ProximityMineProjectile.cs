@@ -7,6 +7,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles.Rockets
 {
+	[Autoload(false)]
 	public class ProximityMineProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults() {

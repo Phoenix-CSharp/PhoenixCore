@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Items.Range
 {
+    [Autoload(false)]
     public class ExplosiveItem : GeneralItem, IRangeItem
     {
         public int projectileID { get; }

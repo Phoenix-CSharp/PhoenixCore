@@ -1,7 +1,9 @@
 using Terraria;
+using Terraria.ModLoader;
 
 namespace PhoenixCore.Items.Summon
 {
+    [Autoload(false)]
     public class WhipItem : GeneralItem, ISummonItem, IWhipItem
     {
         

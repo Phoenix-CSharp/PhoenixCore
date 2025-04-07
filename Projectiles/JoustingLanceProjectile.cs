@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	public class JoustingLanceProjectile : ModProjectile
 	{
 		public int dustID;

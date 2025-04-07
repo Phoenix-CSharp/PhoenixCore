@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles.Rockets
 {
+	[Autoload(false)]
 	public class RocketProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults() {

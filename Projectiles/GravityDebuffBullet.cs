@@ -8,6 +8,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	public class GravityDebuffBullet : ModProjectile
 	{
 		public int? buffID;

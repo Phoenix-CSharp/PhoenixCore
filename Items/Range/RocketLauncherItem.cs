@@ -3,9 +3,11 @@ using Terraria.Audio;
 using Terraria.ID;
 using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.ModLoader;
 
 namespace PhoenixCore.Items.Range
 {
+    [Autoload(false)]
     public class RocketLauncherItem : GeneralItem, IRangeItem
     {
         public int projectileID { get; }

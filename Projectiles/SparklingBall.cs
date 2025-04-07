@@ -6,6 +6,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	public class SparklingBall : ModProjectile
 	{
         public int dustID { get; }

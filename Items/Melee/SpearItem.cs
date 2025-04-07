@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace PhoenixCore.Items.Melee{
+    [Autoload(false)]
     public class SpearItem : GeneralItem , IMeleeItem{
         public int damage {get;}
         public int? projectileID { get; }

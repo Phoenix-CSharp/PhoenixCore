@@ -1,5 +1,8 @@
+using Terraria.ModLoader;
+
 namespace PhoenixCore.Prefixes
 {
+	[Autoload(false)]
 	// Be sure to see 'ExamplePrefix' first.
 	// This class showcases how you can use inheritance to have an easier time with making variants of a single prefix.
 	// With that said, remember that inheritance is just one of the thousands of tools that are available to programmers, and that with great power comes great responsibility.

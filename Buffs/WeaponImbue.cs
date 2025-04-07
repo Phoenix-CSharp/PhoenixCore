@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Buffs
 {
+	[Autoload(false)]
 	/// <summary>
 	/// Only a single weapon imbue buff can apply to a player at a time, Main.meleeBuff ensures that this restriction is met.
 	/// See also ExampleFlask and ExampleWeaponEnchantmentPlayer.

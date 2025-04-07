@@ -7,6 +7,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles.Rockets
 {
+	[Autoload(false)]
 	// This grenade is for the grenades shot by the Grenade Launcher, not the grenades that you can throw.
 	public class GrenadeProjectile : ModProjectile
 	{

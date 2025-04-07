@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.ModLoader;
 
 namespace PhoenixCore.ModPlayers{
+	[Autoload(false)]
     public class LifeRegenDebuffPlayer : ModPlayer
 	{
 		// Flag checking when life regen debuff should be activated

@@ -3,6 +3,7 @@ using Terraria.Audio;
 using Terraria.ModLoader;
 
 namespace PhoenixCore.Items.Melee {
+    [Autoload(false)]
     public class JoustingLanceItem : GeneralItem, IMeleeItem{
         public int? projectileID { get; }
         public float? shootSpeed { get; }

@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Dusts
 {
+	[Autoload(false)]
 	public class Bubble : ModDust
 	{
 		public override void OnSpawn(Dust dust) {

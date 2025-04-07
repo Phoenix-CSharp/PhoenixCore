@@ -1,107 +1,41 @@
-Mods: {
-	PhoenixCore: {
-		Prefixes: {
-			Prefix: {
-				AdditionalTooltip: Mods.PhoenixCore.Prefixes.Prefix.AdditionalTooltip
-				DisplayName: Prefix
-			}
-
-			DerivedPrefix: {
-				AdditionalTooltip: Mods.PhoenixCore.Prefixes.DerivedPrefix.AdditionalTooltip
-				DisplayName: Derived Prefix
-			}
-
-			PowerTooltip: Mods.PhoenixCore.Prefixes.PowerTooltip
+Configs: {
+	PhoenixCoreConfig: {
+		WeaponWithGrowingDamageToggle: {
+			Tooltip: ""
+			Label: Weapon With Growing Damage Toggle
 		}
 
-		Buffs: {
-			LifeRegenDebuff: {
-				DisplayName: Life Regen Debuff
-				Description: Mods.PhoenixCore.Buffs.LifeRegenDebuff.Description
-			}
-
-			WeaponImbue: {
-				DisplayName: Weapon Imbue
-				Description: Mods.PhoenixCore.Buffs.WeaponImbue.Description
-			}
+		WingsToggle: {
+			Tooltip: ""
+			Label: Wings Toggle
 		}
 
-		Items: {
-			GeneralItem: {
-				DisplayName: General Item
-				Tooltip: ""
-			}
-
-			StaffItem: {
-				DisplayName: Staff Item
-				Tooltip: ""
-			}
-		}
-
-		Projectiles: {
-			AdvancedAnimatedProjectile.DisplayName: Advanced Animated Projectile
-			ArrowProjectile.DisplayName: Arrow Projectile
-			Bullet.DisplayName: Bullet
-			FlailProjectile.DisplayName: Flail Projectile
-			InstancedProjectile.DisplayName: Instanced Projectile
-			MinionBossEye.DisplayName: Minion Boss Eye
-			PiercingProjectile.DisplayName: Piercing Projectile
-			GrenadeProjectile.DisplayName: Grenade Projectile
-			ProximityMineProjectile.DisplayName: Proximity Mine Projectile
-			RocketProjectile.DisplayName: Rocket Projectile
-			SparklingBall.DisplayName: Sparkling Ball
-		}
-	}
-}
-
-Prefixes: {
-	PowerTooltip: Mods.PhoenixCore.Prefixes.PowerTooltip
-
-	DerivedPrefix: {
-		AdditionalTooltip: Mods.PhoenixCore.Prefixes.DerivedPrefix.AdditionalTooltip
-		DisplayName: Derived Prefix
-	}
-
-	Prefix: {
-		AdditionalTooltip: Mods.PhoenixCore.Prefixes.Prefix.AdditionalTooltip
-		DisplayName: Prefix
-	}
-}
-
-Buffs: {
-	LifeRegenDebuff: {
-		DisplayName: Life Regen Debuff
-		Description: Mods.PhoenixCore.Buffs.LifeRegenDebuff.Description
-	}
-
-	WeaponImbue: {
-		DisplayName: Weapon Imbue
-		Description: Mods.PhoenixCore.Buffs.WeaponImbue.Description
-	}
-}
-
-Items: {
-	GeneralItem: {
-		DisplayName: General Item
-		Tooltip: ""
-	}
-
-	StaffItem: {
-		DisplayName: Staff Item
-		Tooltip: ""
+		Headers.Items: Items Header
+		DisplayName: Phoenix Core Config
 	}
 }
 
 Projectiles: {
-	AdvancedAnimatedProjectile.DisplayName: Advanced Animated Projectile
-	ArrowProjectile.DisplayName: Arrow Projectile
-	Bullet.DisplayName: Bullet
-	FlailProjectile.DisplayName: Flail Projectile
-	InstancedProjectile.DisplayName: Instanced Projectile
-	MinionBossEye.DisplayName: Minion Boss Eye
-	PiercingProjectile.DisplayName: Piercing Projectile
-	GrenadeProjectile.DisplayName: Grenade Projectile
-	ProximityMineProjectile.DisplayName: Proximity Mine Projectile
-	RocketProjectile.DisplayName: Rocket Projectile
 	SparklingBall.DisplayName: Sparkling Ball
+	PiercingProjectile.DisplayName: Piercing Projectile
+	MinionBossEye.DisplayName: Minion Boss Eye
+	InstancedProjectile.DisplayName: Instanced Projectile
+	FlailProjectile.DisplayName: Flail Projectile
+	Bullet.DisplayName: Bullet
+	ArrowProjectile.DisplayName: Arrow Projectile
+	AdvancedAnimatedProjectile.DisplayName: Advanced Animated Projectile
+}
+
+Prefixes: {
+	Prefix: {
+		DisplayName: Prefix
+		AdditionalTooltip: Mods.PhoenixCore.Prefixes.Prefix.AdditionalTooltip
+	}
+
+	DerivedPrefix: {
+		DisplayName: Derived Prefix
+		AdditionalTooltip: Mods.PhoenixCore.Prefixes.DerivedPrefix.AdditionalTooltip
+	}
+
+	PowerTooltip: Mods.PhoenixCore.Prefixes.PowerTooltip
 }

@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	/// This file showcases the concept of piercing.
 	/// The code of the item that spawns it is located at the bottom.
 

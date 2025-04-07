@@ -2,6 +2,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Dusts
 {
+	[Autoload(false)]
 	public class SolutionDust : ModDust
 	{
 		public int updateType { get; }

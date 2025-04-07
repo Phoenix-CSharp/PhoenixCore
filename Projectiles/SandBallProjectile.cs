@@ -10,6 +10,7 @@ using Terraria.ModLoader;
 // It is possible to make a falling projectile not using ProjAIStyleID.FallingTile, but it is a lot of code.
 namespace PhoenixCore.Projectiles
 {
+	[Autoload(false)]
 	public abstract class SandBallProjectile : ModProjectile
 	{
 		public int tileID;

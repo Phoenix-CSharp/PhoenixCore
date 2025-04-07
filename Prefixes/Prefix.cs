@@ -5,6 +5,7 @@ using Terraria.ModLoader;
 
 namespace PhoenixCore.Prefixes
 {
+	[Autoload(false)]
 	// This class serves as an example for declaring item 'prefixes', or 'modifiers' in other words.
 	public class Prefix : ModPrefix
 	{
