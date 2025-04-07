@@ -7,7 +7,7 @@ namespace PhoenixCore.Buffs
 {
 	// This class serves as an example of a debuff that causes constant loss of life
 	// See ExampleLifeRegenDebuffPlayer.UpdateBadLifeRegen at the end of the file for more information
-	public class ExampleLifeRegenDebuff : ModBuff
+	public class LifeRegenDebuff : ModBuff
 	{
 		public override void SetStaticDefaults() {
 			Main.debuff[Type] = true;  // Is it a debuff?
@@ -18,7 +18,7 @@ namespace PhoenixCore.Buffs
 
 		// Allows you to make this buff give certain effects to the given player
 		public override void Update(Player player, ref int buffIndex) {
-			player.GetModPlayer<ExampleLifeRegenDebuffPlayer>().lifeRegenDebuff = true;
+			player.GetModPlayer<LifeRegenDebuffPlayer>().lifeRegenDebuff = true;
 		}
 	}
 }
