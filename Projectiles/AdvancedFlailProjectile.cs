@@ -1,4 +1,3 @@
-using ExampleMod.Content.Dusts;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
@@ -9,16 +8,21 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles
+namespace PhoenixCore.Projectiles
 {
 	// Example Advanced Flail is a complete adaption of Ball O' Hurt projectile. The code has been rewritten a bit to make it easier to follow. Compare this code against the decompiled Terraria code for an example of adapting vanilla code. A few comments and extra code snippets show features from other vanilla flails as well.
 	// Example Advanced Flail shows a plethora of advanced AI and collision topics.
 	// See ExampleFlail for a simpler but less customizable flail projectile example.
-	public class ExampleAdvancedFlailProjectile : ModProjectile
+	public class AdvancedFlailProjectile : ModProjectile
 	{
-		private const string ChainTexturePath = "ExampleMod/Content/Projectiles/ExampleAdvancedFlailProjectileChain"; // The folder path to the flail chain sprite
-		private const string ChainTextureExtraPath = "ExampleMod/Content/Projectiles/ExampleAdvancedFlailProjectileChainExtra";  // This texture and related code is optional and used for a unique effect
-
+		public int dustID;
+		private  string ChainTexturePath; // The folder path to the flail chain sprite
+		private  string ChainTextureExtraPath;  // This texture and related code is optional and used for a unique effect
+		public AdvancedFlailProjectile(int dustID, string ChainTexturePath, string ChainTextureExtraPath){
+			this.dustID = dustID;
+			this.ChainTexturePath = ChainTexturePath;
+			this.ChainTextureExtraPath = ChainTextureExtraPath;
+		}
 		private static Asset<Texture2D> chainTexture;
 		private static Asset<Texture2D> chainTextureExtra; // This texture and related code is optional and used for a unique effect
 
@@ -316,7 +320,7 @@ namespace ExampleMod.Content.Projectiles
 				dustRate = 1;
 
 			if (Main.rand.NextBool(dustRate))
-				Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, ModContent.DustType<Sparkle>(), 0f, 0f, 150, default(Color), 1.3f);
+				Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, dustID, 0f, 0f, 150, default(Color), 1.3f);
 		}
 
 		public override bool OnTileCollide(Vector2 oldVelocity) {

@@ -5,13 +5,17 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles
+namespace PhoenixCore.Projectiles
 {
 	// This projectile demonstrates exploding tiles (like a bomb or dynamite), spawning child projectiles, and explosive visual effects.
-	public class ExampleExplosive : ModProjectile
+	public class Explosive : ModProjectile
 	{
-		private const int DefaultWidthHeight = 15;
-		private const int ExplosionWidthHeight = 250;
+		public int defaultWidthHeight;
+		public int explosionWidthHeight;
+		public Explosive(int defaultWidthHeight, int explosionWidthHeight){
+			this.defaultWidthHeight = defaultWidthHeight;
+			this.explosionWidthHeight = explosionWidthHeight;
+		}
 
 		private bool IsChild {
 			get => Projectile.localAI[0] == 1;
@@ -29,8 +33,8 @@ namespace ExampleMod.Content.Projectiles
 
 		public override void SetDefaults() {
 			// While the sprite is actually bigger than 15x15, we use 15x15 since it lets the projectile clip into tiles as it bounces. It looks better.
-			Projectile.width = DefaultWidthHeight;
-			Projectile.height = DefaultWidthHeight;
+			Projectile.width = defaultWidthHeight;
+			Projectile.height = defaultWidthHeight;
 			Projectile.friendly = true;
 			Projectile.penetrate = -1;
 
@@ -125,7 +129,7 @@ namespace ExampleMod.Content.Projectiles
 			Projectile.alpha = 255; // Set to transparent. This projectile technically lives as transparent for about 3 frames
 
 			// Change the hitbox size, centered about the original projectile center. This makes the projectile damage enemies during the explosion.
-			Projectile.Resize(ExplosionWidthHeight, ExplosionWidthHeight);
+			Projectile.Resize(explosionWidthHeight, explosionWidthHeight);
 
 			Projectile.damage = 250; // Bomb: 100, Dynamite: 250
 			Projectile.knockBack = 10f; // Bomb: 8f, Dynamite: 10f
@@ -139,7 +143,7 @@ namespace ExampleMod.Content.Projectiles
 					Vector2 launchVelocity = new Vector2(Main.rand.NextFloat(-3, 3), Main.rand.NextFloat(-10, -8));
 					// Importantly, IsChild is set to true here. This is checked in OnTileCollide to prevent bouncing and here in OnKill to prevent an infinite chain of splitting projectiles.
 					Projectile child = Projectile.NewProjectileDirect(Projectile.GetSource_FromThis(), Projectile.Center, launchVelocity, Projectile.type, Projectile.damage, Projectile.knockBack, Main.myPlayer, 0, 1);
-					(child.ModProjectile as ExampleExplosive).IsChild = true;
+					(child.ModProjectile as Explosive).IsChild = true;
 					// Usually editing a projectile after NewProjectile would require sending MessageID.SyncProjectile, but IsChild only affects logic running for the owner so it is not necessary here.
 				}
 			}
@@ -182,7 +186,7 @@ namespace ExampleMod.Content.Projectiles
 				gore.velocity.Y -= 1.5f;
 			}
 			// reset size to normal width and height.
-			Projectile.Resize(DefaultWidthHeight, DefaultWidthHeight);
+			Projectile.Resize(defaultWidthHeight, defaultWidthHeight);
 
 			// Finally, actually explode the tiles and walls. Run this code only for the owner
 			if (Projectile.owner == Main.myPlayer) {

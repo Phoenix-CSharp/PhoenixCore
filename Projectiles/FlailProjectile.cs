@@ -5,11 +5,11 @@ using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles
+namespace PhoenixCore.Projectiles
 {
 	// ExampleFlail and ExampleFlailProjectile show the minimum amount of code needed for a flail using the existing vanilla code and behavior. ExampleAdvancedFlail and ExampleAdvancedFlailProjectile need to be consulted if more advanced customization is desired, or if you want to learn more advanced modding techniques.
 	// ExampleFlailProjectile is a copy of the Sunfury flail projectile.
-	internal class ExampleFlailProjectile : ModProjectile
+	internal class FlailProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults() {
 			ProjectileID.Sets.HeldProjDoesNotUsePlayerGfxOffY[Type] = true;
@@ -48,7 +48,7 @@ namespace ExampleMod.Content.Projectiles
 			return base.PreDrawExtras();
 		}
 		public override bool PreDraw(ref Color lightColor) {
-			Projectile.type = ModContent.ProjectileType<ExampleFlailProjectile>();
+			Projectile.type = ModContent.ProjectileType<FlailProjectile>();
 
 			// This code handles the after images.
 			if (Projectile.ai[0] == 1f) {

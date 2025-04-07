@@ -5,10 +5,10 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles.Rockets
+namespace PhoenixCore.Projectiles.Rockets
 {
 	// This grenade is for the grenades shot by the Grenade Launcher, not the grenades that you can throw.
-	public class ExampleGrenadeProjectile : ModProjectile
+	public class GrenadeProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults() {
 			ProjectileID.Sets.PlayerHurtDamageIgnoresDifficultyScaling[Type] = true; // Damage dealt to players does not scale with difficulty in vanilla.

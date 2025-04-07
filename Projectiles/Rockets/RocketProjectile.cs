@@ -6,9 +6,9 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles.Rockets
+namespace PhoenixCore.Projectiles.Rockets
 {
-	public class ExampleRocketProjectile : ModProjectile
+	public class RocketProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults() {
 			ProjectileID.Sets.IsARocketThatDealsDoubleDamageToPrimaryEnemy[Type] = true; // Deals double damage on direct hits.

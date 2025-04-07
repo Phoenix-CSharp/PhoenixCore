@@ -1,16 +1,15 @@
-﻿using ExampleMod.Content.Items;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles
+namespace PhoenixCore.Projectiles
 {
 	// This file shows an animated projectile
 	// This file also shows advanced drawing to center the drawn projectile correctly
-	public class ExampleAdvancedAnimatedProjectile : ModProjectile
+	public class AdvancedAnimatedProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults() {
 			// Total count animation frames
@@ -143,21 +142,21 @@ namespace ExampleMod.Content.Projectiles
 	}
 
 	// This is a simple item that is based on the NebulaBlaze and shoots ExampleAdvancedAnimatedProjectile to showcase it.
-	internal class ExampleAdvancedAnimatedProjectileItem : ModItem
+	internal class AdvancedAnimatedProjectileItem : ModItem
 	{
-		public override string Texture => $"Terraria/Images/Item_{ItemID.NebulaBlaze}";
+		public string texture;
+		public int projectileID;
+		public AdvancedAnimatedProjectileItem(string texture, int projectileID){
+			this.texture = texture;
+			this.projectileID = projectileID;
+		}
+		public override string Texture => texture;
 
 		public override void SetDefaults() {
 			Item.CloneDefaults(ItemID.NebulaBlaze);
 			Item.mana = 3;
 			Item.damage = 3;
-			Item.shoot = ModContent.ProjectileType<ExampleAdvancedAnimatedProjectile>();
-		}
-		public override void AddRecipes() {
-			CreateRecipe()
-				.AddIngredient<ExampleItem>()
-				.AddTile<Tiles.Furniture.ExampleWorkbench>()
-				.Register();
+			Item.shoot = projectileID;
 		}
 	}
 }

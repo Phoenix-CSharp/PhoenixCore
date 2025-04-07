@@ -1,14 +1,17 @@
-﻿using ExampleMod.Content.Dusts;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles
+namespace PhoenixCore.Projectiles
 {
-	public class ExampleDrillProjectile : ModProjectile
+	public class DrillProjectile : ModProjectile
 	{
+		public int dustID;
+		public DrillProjectile(int dustID){
+			this.dustID = dustID;
+		}
 		public override void SetStaticDefaults() {
 			// Prevents jitter when stepping up and down blocks and half blocks
 			ProjectileID.Sets.HeldProjDoesNotUsePlayerGfxOffY[Type] = true;
@@ -81,7 +84,7 @@ namespace ExampleMod.Content.Projectiles
 
 			// Spawning dust
 			if (Main.rand.NextBool(10)) {
-				Dust dust = Dust.NewDustDirect(Projectile.position + Projectile.velocity * Main.rand.Next(6, 10) * 0.15f, Projectile.width, Projectile.height, ModContent.DustType<Sparkle>(), 0f, 0f, 80, Color.White, 1f);
+				Dust dust = Dust.NewDustDirect(Projectile.position + Projectile.velocity * Main.rand.Next(6, 10) * 0.15f, Projectile.width, Projectile.height, dustID, 0f, 0f, 80, Color.White, 1f);
 				dust.position.X -= 4f;
 				dust.noGravity = true;
 				dust.velocity.X *= 0.5f;

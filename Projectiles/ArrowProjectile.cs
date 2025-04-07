@@ -4,10 +4,10 @@ using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles
+namespace PhoenixCore.Projectiles
 {
 	// This example is similar to the Wooden Arrow projectile
-	public class ExampleArrowProjectile : ModProjectile
+	public class ArrowProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults()
 		{

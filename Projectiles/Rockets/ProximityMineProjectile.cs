@@ -5,9 +5,9 @@ using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace ExampleMod.Content.Projectiles.Rockets
+namespace PhoenixCore.Projectiles.Rockets
 {
-	public class ExampleProximityMineProjectile : ModProjectile
+	public class ProximityMineProjectile : ModProjectile
 	{
 		public override void SetStaticDefaults() {
 			ProjectileID.Sets.IsAMineThatDealsTripleDamageWhenStationary[Type] = true; // Deal triple damage when not moving and "armed".
