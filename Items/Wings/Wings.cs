@@ -5,7 +5,6 @@ using Terraria.ID;
 using Terraria.ModLoader;
 
 namespace PhoenixCore.Items.Wings{
-    [Autoload(false)]
     [AutoloadEquip(EquipType.Wings)]
     public class Wings : ModItem{
         public int flyTimeSec;
